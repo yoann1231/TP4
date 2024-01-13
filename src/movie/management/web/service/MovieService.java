@@ -5,6 +5,7 @@ import java.util.*;
 import movie.management.web.data.Movie;
 
 public class MovieService {
+
     private static Map<Integer, Movie> MOVIE_DATA = new HashMap<Integer, Movie>();
 
     private int getNewId() {

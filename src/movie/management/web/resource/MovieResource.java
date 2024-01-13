@@ -9,6 +9,7 @@ import movie.management.web.service.MovieService;
 
 @Path("/movies")
 public class MovieResource {
+
     MovieService service = new MovieService();
     @Context
     UriInfo uriInfo;
