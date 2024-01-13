@@ -1,23 +1,23 @@
-package student.management.web.data;
+package movie.management.web.data;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Student {
+public class Movie {
     private String name;
     private Float grade;
     private Integer id;
 
-    public Student() {
+    public Movie() {
     }
 
-    public Student(String name, Float grade, Integer id) {
+    public Movie(String name, Float grade, Integer id) {
         this.name = name;
         this.grade = grade;
         this.id = id;
     }
 
-    public Student(String name, Float grade) {
+    public Movie(String name, Float grade) {
         this.name = name;
         this.grade = grade;
         this.id = null;
