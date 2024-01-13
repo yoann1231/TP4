@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/student.management.web"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/movie.management.web"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
