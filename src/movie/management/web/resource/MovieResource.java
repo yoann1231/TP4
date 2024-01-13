@@ -1,6 +1,7 @@
 package movie.management.web.resource;
 
 import java.net.*;
+import java.util.Collection;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
@@ -29,6 +30,19 @@ public class MovieResource {
                 .build();
     }
 
+    @PUT
+    @Path("/{id}")
+    @Consumes(MediaType.APPLICATION_XML)
+    @Produces(MediaType.APPLICATION_XML)
+    public Response updateMovie(@PathParam("id") int id, Movie updatedMovie) {
+        boolean movie = service.updateMovie(id, updatedMovie);
+        if (!movie) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        return Response.status(Response.Status.OK).build();
+    }
+
+
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
@@ -48,5 +62,15 @@ public class MovieResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         return Response.status(Response.Status.OK).entity(movie).build();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getAllMovies() {
+        Collection<Movie> movies = service.getAllMovies();
+        if (movies == null || movies.isEmpty()) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        return Response.status(Response.Status.OK).entity(movies).build();
     }
 }
