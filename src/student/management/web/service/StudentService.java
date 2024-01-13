@@ -20,7 +20,7 @@ s.setId(id);
 STUDENT_DATA.put(id, s);
 return s;
 }
-public boolean deleteStudent(int id) {
+public boolean deleteStudent1(int id) {
 if(STUDENT_DATA.get(id) == null) {
 return false;
 }
