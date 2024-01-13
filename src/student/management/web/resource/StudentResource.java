@@ -42,4 +42,15 @@ public Response getStudent(@PathParam("id") int id) {
         return Response.status(Response.Status.NOT_FOUND).build();
     }
     return Response.status(Response.Status.OK).entity(student).build();
-}}
+}
+    @GET
+    @Path("/{id1}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getStudent1(@PathParam("id1") int id) {
+        Student student = service.getStudent(id);
+        if (student == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        return Response.status(Response.Status.OK).entity(student).build();
+    }
+}
