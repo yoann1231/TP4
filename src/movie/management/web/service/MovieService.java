@@ -1,7 +1,6 @@
 package movie.management.web.service;
 
 import java.util.*;
-
 import movie.management.web.data.Movie;
 
 public class MovieService {
@@ -10,20 +9,21 @@ public class MovieService {
     private int getNewId() {
         int newId = 0;
         for (int id : MOVIE_DATA.keySet()) {
-            if (newId < id)
+            if (newId < id) {
                 newId = id;
+            }
         }
         return ++newId;
     }
 
-    public Movie addMovie(Movie s) {
+    public Movie addMovie(Movie movie) {
         int id = getNewId();
-        if (MOVIE_DATA.get(s.getId()) != null) {
+        if (MOVIE_DATA.get(movie.getId()) != null) {
             return null;
         }
-        s.setId(id);
-        MOVIE_DATA.put(id, s);
-        return s;
+        movie.setId(id);
+        MOVIE_DATA.put(id, movie);
+        return movie;
     }
 
     public boolean deleteMovie(int id) {
@@ -34,7 +34,19 @@ public class MovieService {
         return true;
     }
 
+    public boolean updateMovie(int id, Movie movie){
+        if (MOVIE_DATA.get(id) == null) {
+            return false;
+        }
+        MOVIE_DATA.put(id, movie);
+        return true;
+    }
+
     public Movie getMovie(int id) {
         return MOVIE_DATA.get(id);
+    }
+
+    public Collection<Movie> getAllMovies(){
+        return MOVIE_DATA.values();
     }
 }
