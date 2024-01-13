@@ -25,16 +25,4 @@ public class StudentService {
         STUDENT_DATA.put(id, s);
         return s;
     }
-
-    public boolean deleteStudent2(int id) {
-        if (STUDENT_DATA.get(id) == null) {
-            return false;
-        }
-        STUDENT_DATA.remove(id);
-        return true;
-    }
-
-    public Student getStudent(int id) {
-        return STUDENT_DATA.get(id);
-    }
 }
