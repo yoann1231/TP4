@@ -9,6 +9,7 @@ public class Movie {
     private Integer id;
 
     public Movie() {
+
     }
 
     public Movie(String name, Float grade, Integer id) {
