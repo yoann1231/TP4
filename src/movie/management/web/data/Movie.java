@@ -4,39 +4,39 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Movie {
-    private String name;
-    private Float grade;
     private Integer id;
+    private String title;
+    private String year;
 
     public Movie() {
     }
 
-    public Movie(String name, Float grade, Integer id) {
-        this.name = name;
-        this.grade = grade;
+    public Movie(String title, String year, Integer id) {
+        this.title = title;
+        this.year = year;
         this.id = id;
     }
 
-    public Movie(String name, Float grade) {
-        this.name = name;
-        this.grade = grade;
+    public Movie(String title, String year) {
+        this.title = title;
+        this.year = year;
         this.id = null;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Float getGrade() {
-        return grade;
+    public String getYear() {
+        return year;
     }
 
-    public void setGrade(Float grade) {
-        this.grade = grade;
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public Integer getId() {
