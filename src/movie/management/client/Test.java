@@ -30,7 +30,7 @@ public class Test {
     public static void main(String[] args) {
         Movie alice = new Movie("Alice", 15.0f, add("Alice", 15.0f));
         Movie bob = new Movie("Bob", 13.0f, add("Bob", 13.0f));
-        get(bob.getId());
+        get(bob.getId()); 
         delete(bob.getId());        
         String apiKey = "407c108c";
         OMDbAPICaller omdbAPICaller = new OMDbAPICaller(apiKey);

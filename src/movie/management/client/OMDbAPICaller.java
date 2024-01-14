@@ -17,7 +17,7 @@ public class OMDbAPICaller {
     }
 
     public void searchMovie(String movieTitle, int year) {
-        try {
+        try { 
             // 构建API请求URL
             String apiUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=" + year + "&apikey=" + apiKey;
 
