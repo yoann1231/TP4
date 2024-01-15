@@ -14,6 +14,12 @@ public class MovieResource {
     @Context
     UriInfo uriInfo;
 
+    /**
+     * Ajoute un nouveau film.
+     *
+     * @param s Film à ajouter (au format XML).
+     * @return Réponse HTTP avec le statut et les détails du film ajouté.
+     */
     @POST
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
@@ -30,6 +36,13 @@ public class MovieResource {
                 .build();
     }
 
+    /**
+     * Met à jour les informations d'un film existant.
+     *
+     * @param id            Identifiant du film à mettre à jour.
+     * @param updatedMovie  Nouvelles informations du film (au format XML).
+     * @return Réponse HTTP indiquant le succès ou l'échec de la mise à jour.
+     */
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_XML)
@@ -42,7 +55,12 @@ public class MovieResource {
         return Response.status(Response.Status.OK).build();
     }
 
-
+    /**
+     * Supprime un film en fonction de son identifiant.
+     *
+     * @param id Identifiant du film à supprimer.
+     * @return Réponse HTTP indiquant le succès ou l'échec de la suppression.
+     */
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
@@ -53,6 +71,12 @@ public class MovieResource {
         return Response.status(Response.Status.OK).build();
     }
 
+    /**
+     * Récupère les informations d'un film en fonction de son identifiant.
+     *
+     * @param id Identifiant du film à récupérer.
+     * @return Réponse HTTP avec les détails du film ou une erreur si non trouvé.
+     */
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
@@ -64,6 +88,11 @@ public class MovieResource {
         return Response.status(Response.Status.OK).entity(movie).build();
     }
 
+    /**
+     * Récupère la liste de tous les films.
+     *
+     * @return Réponse HTTP avec la liste des films ou une erreur si la liste est vide.
+     */
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public Response getAllMovies() {
