@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 public class MovieServerImpl implements MovieServer {
-
+	// URL du service web
     private final String webServiceUrl;
 
     public MovieServerImpl(String webServiceUrl) {
