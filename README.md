@@ -5,7 +5,7 @@
 - Yvan (颜令健 1201024044): [yannyvan0909@qq.com](mailto:yannyvan0909@qq.com)
 - Yoann (黄杰 1201024053): [1762773179@qq.com](mailto:1762773179@qq.com)
 - Olivia (石虹婷 1201024038): [877815585@qq.com](mailto:877815585@qq.com)
-- 
+
 ## Exigences du Projet
 
 - **Version de JDK :** 1.8
