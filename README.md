@@ -5,11 +5,11 @@
 - Yvan (颜令健 1201024044): [yannyvan0909@qq.com](mailto:yannyvan0909@qq.com)
 - Yoann (黄杰 1201024053): [1762773179@qq.com](mailto:1762773179@qq.com)
 - Olivia (石虹婷 1201024038): [877815585@qq.com](mailto:877815585@qq.com)
-
-
+- 
 ## Exigences du Projet
 
 - **Version de JDK :** 1.8
+- **Eclipse :** 2019
 - **Version de Tomcat :** 9.0
 - **Version de CXF :** 2.7
 
@@ -17,11 +17,10 @@
 
 Assurez-vous que votre environnement local dispose des logiciels suivants installés, et que les versions sont conformes aux exigences du projet:
 
-- [JDK 1.8](https://www.eclipse.org/downloads/packages/release/2019-12/r/eclipse-ide-enterprise-java-developers)
+- [JDK 1.8](https://www.oracle.com/java/technologies/downloads/#java8)
+- [Eclipse IDE for Enterprise Java Developers 2019-12 (4.14.0)](https://www.eclipse.org/downloads/packages/release/2019-12/r/eclipse-ide-enterprise-java-developers)
 - [Tomcat 9.0](https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.zip)
 - [CXF 2.7](https://archive.apache.org/dist/cxf/2.7.18/apache-cxf-2.7.18.zip)
-
-
 
 ## Présentation du projet
 
